@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/routes/index.js"],"names":[],"mappings":"uCAAA,uC;AACA,qD;;AAEA,IAAM,SAAS,0BAAf;;AAEA,OAAO,GAAP,CAAW,GAAX,uB;;AAEe,M","file":"index.js","sourcesContent":["import Router from 'koa-router'\nimport indexCtrl from '../controllers/indexCtrl'\n\nconst router = Router()\n\nrouter.get('/', indexCtrl)\n\nexport default router\n"]}

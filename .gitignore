@@ -40,6 +40,12 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# app // compiled js
+app
+
+# Intellij
+.idea/
+*.iml
 
 ### WebStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm

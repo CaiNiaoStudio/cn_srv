@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/controllers/indexCtrl.js"],"names":[],"mappings":"yeAAe,iBAAO,GAAP,EAAY,IAAZ;AACP,iBADO,GACC,YADD;;AAGP,kBAAI,MAAJ,CAAW,OAAX,EAAoB;AACxB,4BADwB,EAApB,CAHO,qE","file":"indexCtrl.js","sourcesContent":["export default async (ctx, next) => {\n  const title = 'koa2 title'\n\n  await ctx.render('index', {\n    title\n  })\n}\n"]}
