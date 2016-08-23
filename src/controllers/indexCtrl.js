@@ -1,5 +1,5 @@
 export default async (ctx, next) => {
-  const title = 'koa2 title'
+  const title = 'cn_srv title';
 
   await ctx.render('index', {
     title
