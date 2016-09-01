@@ -28,9 +28,9 @@ app.use(convert(koaStatic(path.join(__dirname, '../public'), {
 })));
 
 // views
-app.use(views(path.join(__dirname, config.viewDir), {
-    extension: 'ejs'
-}));
+//app.use(views(path.join(__dirname, config.viewDir), {
+//    extension: 'ejs'
+//}));
 
 // 500 error
 koaOnError(app, {
@@ -45,16 +45,19 @@ app.use(async(ctx, next) => {
     console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-// response router
-app.use(async(ctx, next) => {
-    await require('./routes').routes()(ctx, next);
-});
+// response route
+//app.use(async(ctx, next) => {
+//    await require('./routes').routes()(ctx, next);
+//});
 
 // 404
-app.use(async(ctx) => {
-    ctx.status = 404;
-    await ctx.render('404');
+app.use(ctx => {
+  ctx.body = 'Hello Bird';
 });
+//app.use(async(ctx) => {
+//    ctx.status = 404;
+//    await ctx.render('404');
+//});
 
 // error logger
 app.on('error', async(err, ctx) => {
