@@ -3,7 +3,7 @@
  * @Author Ling.
  * @Email i@zeroling.com
  */
-export default {
+module.exports =  {
     port: 3000,
     db: {
         host: 'localhost',

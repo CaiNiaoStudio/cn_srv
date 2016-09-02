@@ -3,7 +3,7 @@
  */
 'use strict';
 
-export default {
+module.exports = {
     port: 3000,
     viewDir: '../views',
     db: {

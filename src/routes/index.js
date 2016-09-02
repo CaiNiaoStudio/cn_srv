@@ -5,4 +5,4 @@ const router = Router();
 
 router.get('/', indexCtrl);
 
-export default router;
+module.exports = router;

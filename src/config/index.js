@@ -23,4 +23,4 @@ fs.readdirSync(__dirname).map(filename => {
 cfgs.push(defaultConfig);
 
 const config = defaultsDeep.apply(lodash, cfgs);
-export default config
+module.exports = config;

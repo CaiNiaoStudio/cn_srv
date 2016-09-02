@@ -12,12 +12,11 @@ import koaOnError from 'koa-onerror';
 import config from './config';
 
 const app = new Koa();
-const bodyparser = Bodyparser();
 
 // middlewares
-app.use(convert(bodyparser));
+app.use(Bodyparser());
 app.use(convert(json()));
-app.use(convert(logger()));
+app.use(logger());
 
 // favicon
 app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
@@ -28,9 +27,9 @@ app.use(convert(koaStatic(path.join(__dirname, '../public'), {
 })));
 
 // views
-//app.use(views(path.join(__dirname, config.viewDir), {
-//    extension: 'ejs'
-//}));
+app.use(views(path.join(__dirname, config.viewDir), {
+    extension: 'ejs'
+}));
 
 // 500 error
 koaOnError(app, {
