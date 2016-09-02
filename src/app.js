@@ -10,6 +10,7 @@ import logger from 'koa-logger';
 import koaStatic from 'koa-static-plus';
 import koaOnError from 'koa-onerror';
 import config from './config';
+import router from './routes';
 
 const app = new Koa();
 
@@ -45,18 +46,13 @@ app.use(async(ctx, next) => {
 });
 
 // response route
-//app.use(async(ctx, next) => {
-//    await require('./routes').routes()(ctx, next);
-//});
+app.use(router.routes());
 
 // 404
-app.use(ctx => {
-  ctx.body = 'Hello Bird';
+app.use(async(ctx) => {
+    ctx.status = 404;
+    await ctx.render('404');
 });
-//app.use(async(ctx) => {
-//    ctx.status = 404;
-//    await ctx.render('404');
-//});
 
 // error logger
 app.on('error', async(err, ctx) => {
