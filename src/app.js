@@ -29,12 +29,12 @@ app.use(convert(koaStatic(path.join(__dirname, '../public'), {
 
 // views
 app.use(views(path.join(__dirname, config.viewDir), {
-    extension: 'ejs'
+    extension: 'pug'
 }));
 
 // 500 error
 koaOnError(app, {
-    template: path.join(__dirname, '../views', '500.ejs')
+    template: path.join(__dirname, '../views', '500.pug')
 });
 
 // logger

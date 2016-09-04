@@ -3,7 +3,6 @@
     "debug": "registry:npm/debug#2.0.0+20160723033700"
   },
   "globalDependencies": {
-    "ejs": "registry:dt/ejs#0.0.0+20160317120654",
     "koa": "registry:dt/koa#2.0.0+20160724024233",
     "koa-bodyparser": "registry:dt/koa-bodyparser#3.0.0+20160414124440",
     "koa-favicon": "registry:dt/koa-favicon#2.0.0+20160406115540",

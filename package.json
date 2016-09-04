@@ -17,7 +17,6 @@
     "babel-preset-latest": "^6.14.0",
     "babel-preset-stage-3": "^6.11.0",
     "babel-runtime": "^6.11.6",
-    "ejs": "^2.5.1",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.2.0",
     "koa-convert": "^1.2.0",
@@ -28,7 +27,8 @@
     "koa-router": "^7.0.0",
     "koa-static-plus": "^0.1.1",
     "koa-views": "^5.0.2",
-    "lodash": "^4.11.1"
+    "lodash": "^4.11.1",
+    "pug": "^2.0.0-beta6"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
