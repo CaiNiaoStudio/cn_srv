@@ -1,0 +1,52 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "es6": true,
+        "mocha": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "ecmaFeatures": {
+        "arrowFunctions": true
+    },
+    "rules": {
+        "no-console": [
+            0, { "allow": ["warn", "error"] }
+        ],
+        "no-unused-vars": [
+            0, { "vars": "all", "args": "after-used" }
+        ],
+        "indent": [
+            "warn",
+            4
+        ],
+        "linebreak-style": [
+            "warn",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "warn",
+            "always"
+        ],
+        "func-style": [
+            "error", 
+            "declaration", { "allowArrowFunctions": true }
+        ]
+    }
+}

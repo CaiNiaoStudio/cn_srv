@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "debug": "registry:npm/debug#2.0.0+20160723033700"
+  },
+  "globalDependencies": {
+    "ejs": "registry:dt/ejs#0.0.0+20160317120654",
+    "koa": "registry:dt/koa#2.0.0+20160724024233",
+    "koa-bodyparser": "registry:dt/koa-bodyparser#3.0.0+20160414124440",
+    "koa-favicon": "registry:dt/koa-favicon#2.0.0+20160406115540",
+    "koa-json": "registry:dt/koa-json#2.0.0+20160412125208",
+    "koa-router": "registry:dt/koa-router#7.0.0+20160812160355",
+    "lodash": "registry:dt/lodash#4.14.0+20160830145422",
+    "node": "registry:dt/node#6.0.0+20160831021119"
+  },
+  "globalDevDependencies": {
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353"
+  }
+}
