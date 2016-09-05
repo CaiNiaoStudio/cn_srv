@@ -47,6 +47,7 @@ app.use(async(ctx, next) => {
 
 // response route
 app.use(router.routes());
+app.use(router.allowedMethods());
 
 // 404
 app.use(async(ctx) => {
