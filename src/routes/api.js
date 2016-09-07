@@ -2,8 +2,8 @@ import Router from 'koa-router';
 
 const router = Router();
 
-router.get('/', async (ctx, next) => {
-  ctx.body = 'Hello Bird';
+router.get('/signin', async (ctx, next) => {
+  console.log("login: ", ctx.query.loginNo);
 });
 
 export default router;
