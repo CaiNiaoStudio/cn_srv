@@ -23,8 +23,8 @@ app.use(convert(logger()));
 app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
 
 // static
-app.use(convert(koaStatic(path.join(__dirname, '../public'), {
-    pathPrefix: ''
+app.use(convert(koaStatic(path.join(__dirname, '../public/beanie'), {
+    pathPrefix: '/2'
 })));
 
 // views

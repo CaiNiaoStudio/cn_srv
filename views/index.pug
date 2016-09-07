@@ -1,9 +1,22 @@
 doctype html
 html
   head
-    title #{title}
-    link(rel='stylesheet' href='/static/stylesheets/style.css')
-  body
-    h1 #{title}
-    p pug Welcome to #{title}
+    link(rel='stylesheet' href='/2/stylesheets/biz/login_style.css')
+    link(type='text/css', rel='stylesheet', href='/2/stylesheets/bootstrap.css')
+    link(type='text/css', rel='stylesheet', href='/2/stylesheets/jquery-ui-bootstrap.css')
+    script(type='text/javascript', src='/2/script/jquery-1.9.1.js')
+    script(type='text/javascript', src='/2/script/jquery-ui.min.js')
+    script(type='text/javascript', src='/2/script/biz/login-mini.js')
+    
+  body(align='center')
+    div.login-bg
+      img.login-img(src='/2/img/login-bg.jpg', alt='')
+    
+    form.login_form
+      div
+        input.login-input#loginNo(type='text', name='loginNo', value="No") 
+      div
+        input.login-input#password(type='password', name='passwd')
+      div.login-button-margin
+        a.ui-button-success.submit-button#submit-button Login
 

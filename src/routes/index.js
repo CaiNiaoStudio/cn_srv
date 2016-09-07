@@ -10,6 +10,6 @@ router.get('/', async (ctx, next) => {
   })
 });
 
-router.use('/2', api.routes(), api.allowedMethods());
+router.use('/api', api.routes());
 
 module.exports = router;
