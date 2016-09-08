@@ -11,6 +11,7 @@ import koaStatic from 'koa-static-plus';
 import koaOnError from 'koa-onerror';
 import config from './config';
 import router from './routes';
+import middlewares from './routes/middlewares.js';
 
 const app = new Koa();
 
@@ -18,6 +19,7 @@ const app = new Koa();
 app.use(Bodyparser());
 app.use(convert(json()));
 app.use(convert(logger()));
+app.use(middlewares.midDb());
 
 // favicon
 app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));

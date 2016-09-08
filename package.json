@@ -28,6 +28,7 @@
     "koa-static-plus": "^0.1.1",
     "koa-views": "^5.0.2",
     "lodash": "^4.11.1",
+    "mongoose": "^4.6.0",
     "pug": "^2.0.0-beta6"
   },
   "devDependencies": {
