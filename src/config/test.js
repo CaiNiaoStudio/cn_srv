@@ -1,10 +1,11 @@
 /**
- * Created at 16/4/11.
- * @Author Ling.
- * @Email i@zeroling.com
+ * Created by chenjunsheng on 16/8/23.
  */
-module.exports =  {
+'use strict';
+
+module.exports = {
     port: 3000,
+    viewDir: '../views',
     db: {
         host: 'localhost',
         database: 'cn_srv',

@@ -3,24 +3,21 @@
  * @Author Ling.
  * @Email i@zeroling.com
  */
-import fs from 'fs'
-import lodash, {isPlainObject, defaultsDeep} from 'lodash'
-import defaultConfig from './default'
+import {merge} from 'lodash'
+import development from './development';
+import test from './test';
+import production from './production';
 
-const cfgs = [];
-fs.readdirSync(__dirname).map(filename => {
-    if (filename === 'index.js') {
-        return false
-    }
-    try {
-        const cfg = require('./' + filename);
-        if (isPlainObject(cfg)) {
-            cfgs.push(cfg)
-        }
-    } catch (e) {
-    }
-});
-cfgs.push(defaultConfig);
+var env = process.env.NODE_ENV || 'development';
+var configs = {
+  development: development,
+  test: test,
+  production: production
+};
+var defaultConfig = {
+  env
+};
 
-const config = defaultsDeep.apply(lodash, cfgs);
+var config = merge(defaultConfig, configs[env]);
 module.exports = config;
+

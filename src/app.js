@@ -19,7 +19,7 @@ const app = new Koa();
 app.use(Bodyparser());
 app.use(convert(json()));
 app.use(convert(logger()));
-app.use(middlewares.midDb());
+app.use(middlewares.midDb(config.db));
 
 // favicon
 app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
